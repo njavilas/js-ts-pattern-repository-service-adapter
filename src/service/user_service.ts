@@ -1,6 +1,6 @@
 import { IUser } from "../domain/user";
 import { v4 as uuidv4 } from "uuid";
-import { IRepository } from "../repository/repository";
+import { IRepository } from "../repositories/repository";
 
 export interface IUserService {
     create(name: string, email: string): Promise<IUser>

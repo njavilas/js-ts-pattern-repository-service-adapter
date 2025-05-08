@@ -3,7 +3,7 @@ import dynamoose from "dynamoose";
 
 import { UserAdapter } from "./adapters/user_adapter";
 import { UserService } from "./service/user_service";
-import { UserRepositoryImpl } from "./repository/user_repository";
+import { UserRepositoryImpl } from "./repositories/user_repository";
 
 dynamoose.aws.ddb.local();
 

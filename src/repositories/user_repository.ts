@@ -1,8 +1,8 @@
 import { client } from "../models/user_model";
 import { IUser } from "../domain/user";
-import { IRepository } from "./repository";
+import { IUserRepository } from "./repository";
 
-export class UserRepositoryImpl implements IRepository {
+export class UserRepositoryImpl implements IUserRepository {
     async create(user: IUser): Promise<IUser> {
         return await client.create(user);
     }
