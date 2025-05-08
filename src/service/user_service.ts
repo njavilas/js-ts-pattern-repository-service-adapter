@@ -1,6 +1,6 @@
 import { IUser } from "../domain/user";
 import { v4 as uuidv4 } from "uuid";
-import { IRepository } from "../repositories/repository";
+import { IUserRepository } from "../repositories/repository";
 
 export interface IUserService {
     create(name: string, email: string): Promise<IUser>
@@ -11,9 +11,9 @@ export interface IUserService {
 }
 
 export class UserService implements IUserService {
-    private repository: IRepository
+    private repository: IUserRepository
 
-    constructor(repository: IRepository) {
+    constructor(repository: IUserRepository) {
         this.repository = repository
     }
 
